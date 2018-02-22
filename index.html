@@ -1,0 +1,8 @@
+# Android APP 断点续传问题
+
+< 近期分析nginx日志发现，有Android终端频繁发起重复断点续传请求，下载目标是Android APP。
+·192.168.1.100 "1.436" "-" [5/Feb/2018:10:48:14 +0800] "www.XXXXXXXX.com GET /app/1.2.1.apk HTTP/1.1" 206 984532 "-" "Mozilla/5.0 (Winlike Gecko) Chrome/14.0.835.163 Safari/535.1" 
+192.168.1.100 "1.157" "-" [5/Feb/2018:10:48:15 +0800] "www.XXXXXXXX.com GET /app/1.2.1.apk HTTP/1.1" 206 984532 "-" "Mozilla/5.0 (Winlike Gecko) Chrome/14.0.835.163 Safari/535.1" 
+192.168.1.100 "0.775" "-" [5/Feb/2018:10:48:17 +0800] "www.XXXXXXXX.com GET /app/1.2.1.apk HTTP/1.1" 206 984532 "-" "Mozilla/5.0 (Winlike Gecko) Chrome/14.0.835.163 Safari/535.1" 
+192.168.1.100 "0.602" "-" [5/Feb/2018:10:48:19 +0800] "www.XXXXXXXX.com GET /app/1.2.1.apk HTTP/1.1" 206 984532 "-" "Mozilla/5.0 (Winlike Gecko) Chrome/14.0.835.163 Safari/535.1" 
+·
